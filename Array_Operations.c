@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 //Author name : Utkarsh Anand
 //Unique id   : 2005574
 //Program     : To perform operations on 1D array
@@ -19,19 +20,20 @@ int main()
     int *ptr=ar;
     int *ptr1=ar[n];
     printf("Enter the elements of the array\n");
-    arrayDataFill(ptr,n);
+    arrayDataFill(ptr,n);//Calling function to fill the elements of the array
     printf("The entered array is :\n");
-    arrayDisplay(ptr,n);
-    arraySumAndAverage(ptr,n);
-    arrayMinAndMax(ptr,n);
+    arrayDisplay(ptr,n);//Calling function to display the elements of the array
+    arraySumAndAverage(ptr,n);//Calling function to find the sum and average of the elements of the array
+    arrayMinAndMax(ptr,n);//Calling function to find the minimum and maximum element of the array
     printf("The elements of the array in the reverse order is\n");
-    arrayReverse(ptr,n);
+    arrayReverse(ptr,n);//Calling function to reverse the elements of the array
     printf("\nEnter the threshold value\n");
     int thresValue;
     scanf("%d",&thresValue);
-    countGreaterThanTheThresholdValue(ptr,n,thresValue);
+    countGreaterThanTheThresholdValue(ptr,n,thresValue);//Calling function to count the no. of elements greater than the threshold value
     return 0;
 }
+//Function to fill the elements of the array
 void arrayDataFill(int *ptr, int n)
 {
     int *pcurr=ptr;
@@ -42,6 +44,7 @@ void arrayDataFill(int *ptr, int n)
 
     }
 }
+//Function to display the elements of the array
 void arrayDisplay( int *ptr, int n)
 {
     int *pcurr=ptr;
@@ -51,6 +54,7 @@ void arrayDisplay( int *ptr, int n)
         printf("%d ",*(pcurr+i));
     }
 }
+//Function to find the sum and average of the elements of the array
 void arraySumAndAverage( int *ptr, int n)
 {
     int *pcurr=ptr;
@@ -62,6 +66,7 @@ void arraySumAndAverage( int *ptr, int n)
     float avg=(float)sum/n;
     printf("\nThe sum of the elements of the array is %d and the average of the elements of the array is %f\n",sum,avg);
 }
+//Function to find the minimum and maximum element of the array
 void arrayMinAndMax( int *ptr, int n)
 {
     int *pcurr=ptr;
@@ -76,6 +81,7 @@ void arrayMinAndMax( int *ptr, int n)
     }
     printf("The minimum element of the array is %d and the maximum element of the array is %d\n",mini,maxi);
 }
+//Function to reverse the elements of the array
 void arrayReverse(int *ptr, int n)
 {
     int *pcurr=ptr;
@@ -85,6 +91,7 @@ void arrayReverse(int *ptr, int n)
        printf("%d ",*(pcurr+i));
     }
 }
+//Function to count the no. of elements greater than the threshold value
 void countGreaterThanTheThresholdValue( int *ptr, int n, int tval)
 {
     int *pcurr=ptr;
