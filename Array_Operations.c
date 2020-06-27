@@ -84,7 +84,7 @@ void arrayMinAndMax( int *ptr, int n)
 void arrayReverse(int *ptr, int n)
 {
     int *pcurr=ptr;
-    int i, temp;
+    int i;
     for(i=n-1;i>=0;i--)
     {
        printf("%d ",*(pcurr+i));
