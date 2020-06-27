@@ -18,7 +18,6 @@ int main()
     scanf("%d",&n);
     int ar[n];
     int *ptr=ar;
-    int *ptr1=ar[n];
     printf("Enter the elements of the array\n");
     arrayDataFill(ptr,n);//Calling function to fill the elements of the array
     printf("The entered array is :\n");
